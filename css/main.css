@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url("../fonts/icomoon/icomoon.eot?srf3rx");
+    src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal; }
+    
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.7); }
+
+.navbar {
+    background-color: #0abda0;
+    transition: background-color 0.3s ease-in-out;
+    position: sticky;
+    top: 0;
+    z-index: 100; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; }
+    .navbar.sticky {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+    .navbar.scrolled {
+        background-color: #ebf2ea;
+        color: #0abda0;
+    }    
+    .logo {
+        color: #bf9d7a;
+        font-weight: bold;
+        font-size: 28px; 
+        margin-right: 100px; }
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0; }
+        .nav-menu li {
+          margin: 0 15px; }
+            .nav-menu li a {
+                text-decoration: none;
+                font-size: 14px;
+                color: white; }
+    .navlinks {
+        display: flex;
+        justify-content: space-around; }
+    .nav-link {
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin-right: 16px; }  
+        #partner-link {
+            color: #ebf2ea;
+            background-color: #0abda0;
+            border: 2px solid #ebf2ea;
+            border-radius: 5px; }
+         #get-started-link {
+            background-color: #ebf2ea;
+            color: #0abda0;
+            border: 2px solid #ebf2ea;
+            border-radius: 5px; }   
+    .nav-menu-icon {
+            display: none;
+            cursor: pointer; }
+    .nav-menu.active {
+            display: block;
+}
+   
+.hero {
+    background-color: #0abda0;
+    padding: 50px 0;
+    margin-bottom: 20px; }
+    .hero-content {
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px; }
+        .hero-text {
+            flex: 1;
+            margin-right: 120px;
+            max-width: 50%; }
+            .hero-text h3 {
+                font-size: 35px;
+                color: #ebf2ea;
+                margin-bottom: 10px; }
+            .hero-text p {
+                font-size: 15px;
+                color: #ebf2ea;
+                margin-bottom: 50px; }
+            .hero-text a {
+                background-color: #ebf2ea;
+                color: #0abda0;
+                text-decoration: none;
+                font-weight: bold;
+                width: fit-content;
+                height: 200px;
+                padding: 10px 10px;
+                border: 2px solid #ebf2ea;
+                border-radius: 5px; }    
+        .hero-content img {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 
+            0px -4px 10px rgba(0, 0, 0, 0.2), 
+            -4px 0px 10px rgba(0, 0, 0, 0.2), 
+            4px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 380px;
+            height: 280px;
+            margin-right: 80px; 
+}  
+
+.appointments {
+    background-color: #ebf2ea;
+    position: relative; }
+    .appointments-content img {
+    position: absolute;
+    top: 200px;
+    left: 14%;
+    width: 420px;
+    height: 420px;
+    border-radius: 5px;
+    z-index: 2; }
+    .appointments-content .appointments-text {
+    position: absolute;
+    top: -50%;
+    right: 0;
+    max-width: 900px;
+    height:700px;
+    border-radius: 2px;
+    padding-top: 100px;
+    padding-left: 180px;
+    margin-left: 500px;
+    background-color: #efcca9b2; }
+        .appointments-content .appointments-text h5 {
+        font-size: 30px;}
+        .appointments-content .appointments-text p {
+            font-size: 22px;}
+            .appointments-content .appointments-text ul li {
+                font-size: 25px;}
