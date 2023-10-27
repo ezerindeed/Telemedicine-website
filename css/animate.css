@@ -1,0 +1,68 @@
+/* CSS for fadeIn effect */
+.animated.fadeIn {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* CSS for fadeInLeft effect */
+.animated.fadeInLeft {
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: fadeInLeft 1s forwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* CSS for fadeInRight effect */
+.animated.fadeInRight {
+    opacity: 0;
+    transform: translateX(40px);
+    animation: fadeInRight 1s forwards;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* CSS for fadeInUp effect */
+.animated.fadeInUp {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -10,6 +10,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
 	
+	<script src="https://kit.fontawesome.com/0db609ab88.js" crossorigin="anonymous"></script>
+
 	<!--Animate css-->
 	<link rel="stylesheet" href="css/animate.css">
 	<!--Browser appearance-->
@@ -20,8 +22,8 @@
 <body>
 	<header>
 		<nav class="navbar" id="navbar">
-		  <div class="logo">lOgO</div>
-		  <div class="nav-menu-icon" onclick="toggleMenu()">&#9776;</div>
+		  <div class="logo">e-Clinic</div>
+		  <div class="nav-menu-icon" id="nav-menu-icon" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
 		  <ol class="nav-menu" id="nav-menu">
 			<li><a href="#">About Us</a></li>
 			<li><a href="#">Services</a></li>
@@ -41,7 +43,7 @@
 
 	<main>
 		<section class="hero" id="hero">
-			<div class="hero-content" id="hero-content">
+			<div class="hero-content animate-box" data-animate-effect="fadeInLeft" id="hero-content">
 				<div class="hero-text" id="hero-text">
 				  <h3>Empowering Health, Enriching Lives: Your Trusted Online Healthcare Partner</h3>
 				   <p>Explore a holistic approach to your health with our wide range of services. You'll find expert guidance, essential healthcare support, and everything you need for your journey to wellness – all just <span>a click away</span>.</p>				   
@@ -51,9 +53,9 @@
 		</section>
 
 		<section class="appointments" id="appointments">
-			<div class="appointments-content" id="appointments-content">
-				<img src="images/appointment.png" alt="telemedicine">
-				<div class="appointments-text" id="appointments-text">
+			<div class="appointments-content animate-box" id="appointments-content">
+				<img class="animate-box" data-animate-effect="fadeInLeft" src="images/appointment.png" alt="telemedicine">
+				<div class="appointments-text animate-box" data-animate-effect="fadeInRight" id="appointments-text">
 					<h5>Discover affordable healthcare</h5>
 					<p>Discover an array of opportunities at lOgO where we unlock a budget-friendly path to optimal health. With us, you can experience the convenience of instant access to top-notch healthcare by effortlessly booking appointments at a network of partner hospitals in your vicinity. Your well-being is our utmost priority, and we're dedicated to ensuring that you receive the care you deserve</p>
 				    <ul>
@@ -61,72 +63,250 @@
 						<li>User-Friendly for Everyone</li> <br>
 						<li>A Supportive Community</li> <br>
 					</ul>
-					<a href="#">Book An Appointment Now</a>
+					<a href="#">Book an Appointment Now</a>
 				</div>
 			</div>	
 		</section>
 
-		<section class="services" id="services">
-			<h3>How It Works</h3>
-			<div class="services-content" id="services-content">
+		<section class="services fade-in" id="services">
+			<h3 class="animate-box" data-animate-effect="fadeInUp">How It Works</h3>
+			<div class="services-content animate-box" data-animate-effect="fadeInUp">
 				<img src="./images/scheduling.png" alt="Image showing scheduling appointment">
 				<div class="services-text">
 					<h4>Schedule an Appointment</h4>
 					<p>Use our easy online appointment booking system to choose a suitable date and time for your consultation.</p>
 				</div>
 			</div>
-			<div class="services-content" id="services-content">
+			<i class="fa-solid fa-arrow-down animate-box" data-animate-effect="fadeInUp"></i>
+			<div class="services-content animate-box" data-animate-effect="fadeInUp">
 				<img src="./images/call.png" alt="Image showing doctor and patient video call">
 				<div class="services-text">
 					<h4>Virtual Consultation</h4>
 					<p>Connect with a qualified healthcare professional through a secure and confidential video session. Discuss your health concerns and receive expert guidance.</p>
 				</div>
 			</div>
+			<i class="fa-solid fa-arrow-down animate-box" data-animate-effect="fadeInUp"></i>
+			<div class="services-content animate-box" data-animate-effect="fadeInUp">
+				<img src="./images/prescription.png" alt="Image showing prescription and diagnostic">
+				<div class="services-text">
+					<h4> Receive Care and Prescriptions</h4>
+					<p> After your virtual consultation, if necessary, you'll receive prescriptions electronically, and you can also order medications from our partnered pharmacies for convenient delivery to your doorstep.</p>
+					<br>
+					<a href="#">Get Started with Health</a>
+				</div>
+			</div>
 		</section>
 
 		<section class="meetDoctors" id="meetDoctors">
-			<div class="meetDoctors-content" id="meetDoctors-content">
-
+			<div class="meetDoctors-content animate-box" data-animate-effect="fadeInUp" id="meetDoctors-content">
+				<h3>Our secret to great virtual care is great doctors</span></h3>
+				<p>Board-certified | Top 5% of medical specialists in the world | +90% satisfaction rating</p>
+				<a class="link" href="#">See what makes us great  <i class="fa-solid fa-arrow-right-long"></i></a>
+				<div class="images">
+					<img src="images/doctors.png" alt="">
+				</div>
 			</div>
+			<div class="testimonials animate-box" data-animate-effect="fadeInUp">
+				<div class="testimonial active">
+					<div>
+						<p class="iv_comma">&ldquo;</p>
+						<div class="text">
+							<p>The level of care and attention I received here was beyond exceptional. It changed my life profoundly, and I'm deeply grateful for the incredible support.</p>
+							<div class="testimonial-info">
+								<img src="images/first-review.jpg" alt="Image of a woman">
+								<p class="name">Fahra Johnson</p>
+							</div>
+						</div>
+						<p class="iv_comma">&rdquo;</p>
+					</div>
+				</div>
+				<div class="testimonial">
+					<div>
+						<p class="iv_comma">&ldquo;</p>
+						<div class="text">
+							<p>I cannot express how grateful I am for the compassionate and dedicated team. They went above and beyond to help me during a challenging time. I will forever be indebted to them.</p>
+							<div class="testimonial-info">
+								<img src="images/second-review.jpg" alt="Image of a man">
+								<p class="name">Dave Andrew</p>
+							</div>
+					 	</div>
+						<p class="iv_comma">&rdquo;</p>
+					</div>
+				</div>
+				<div class="testimonial">
+					<div>
+						<p class="iv_comma">&ldquo;</p>
+						<div class="text">
+							<p>When life took an unexpected turn, this amazing service was my guiding light. Their expertise, support, and care were unwavering, and I found my way back to health with their help.</p>
+							<div class="testimonial-info">
+								<img src="images/third-review.jpg" alt="Image of a lady">
+								<p class="name">Aria Siwell</p>
+							</div>
+						</div>
+						<p class="iv_comma">&rdquo;</p>
+					</div>
+				</div>
+				<div class="mD-lastSection">
+					<div class="indicators">
+						<span class="indicator active"></span>
+						<span class="indicator"></span>
+						<span class="indicator"></span>
+					</div>
+					<a class="review" href="#">More Success Stories</a>
+				</div>			
+			</div>
+		</section>
+		<section class="faqs fade-in animate-box" data-animate-effect="fadeInUp">
+			<h3>Frequently asked questions</h3>
+			<div class="faq">
+				<div class="question">
+					<h2>What services do you offer, and how can they benefit my health?</h2>
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+				<div class="answer">
+				   <p>We offer a wide range of health services designed to enhance your well-being. Whether you need routine check-ups, consultations for minor illnesses, or expert guidance for chronic conditions, our platform provides convenient access to quality healthcare from the comfort of your home.</p>
+				   <p>Our services are designed to make healthcare more accessible and convenient for you.</p>
+				</div>
+				<div class="question">
+					<h2>How do I book an appointment with a specific healthcare provider?</h2>
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+				<div class="answer">
+				   <p>Scheduling an appointment with your chosen healthcare provider is simple on our user-friendly platform.</p>
+				   <p>You can browse our list of experienced providers, select the one you prefer, choose a suitable time slot, and provide your contact information.</p> 
+				   <p>Once your appointment is confirmed, you'll receive detailed instructions on how to join the virtual consultation.</p>
+				</div>
+				<div class="question">
+					<h2>What technology do I need for online consultations?</h2>
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+				<div class="answer">
+				   <p>To participate in online consultations, all you need is a device with a camera and a stable internet connection.</p>
+				   <p>Additionally, you may be required to download a specific app or software provided by our platform, ensuring a seamless and secure virtual healthcare experience.</p>
+				</div>
+				<div class="question">
+					<h2> Is my personal health information secure during online consultations?</h2>
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+				<div class="answer">
+				   <p>We take your privacy and data security seriously. Our platform uses advanced encryption and secure servers to protect your personal health information.</p>
+				   <p>We strictly adhere to healthcare privacy regulations to ensure that your data remains confidential and secure throughout your online consultations.</p>
+				</div>
+				<div class="question">
+					<h2>Can I get prescriptions during online consultations if needed?</h2>
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+				<div class="answer">
+				   <p>Absolutely, many of our healthcare providers can electronically prescribe medications when necessary. This means that you can receive the prescriptions you require during your online consultation, just as you would during an in-person visit. This adds to the convenience and efficiency of our healthcare services.
+				</p>
+				</div>
+				<div class="question">
+					<h2>How can I pay for your services, and what are the costs involved?</h2>
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+				<div class="answer">
+				   <p>We offer a variety of payment options to suit your needs. These may include insurance, credit cards, and other common payment methods.</p>
+				   <p>If you're not using insurance, the cost of your appointment will depend on the specific service and healthcare provider.</p>
+				   <p>Our commitment is to make quality healthcare accessible and transparent, so you'll always be informed about the costs.</p>
+				</div>
+				<div class="question">
+					<h2>Can I consult with specialists for specific health concerns?</h2>
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+				<div class="answer">
+				   <p>Absolutely, our platform connects you with a diverse team of specialists who are experts in their respective fields.</p>
+				   <p>Whether you require specialized care for a particular health concern or need a second opinion, our healthcare providers are here to assist you in getting the expert advice and consultations you need.</p>
+				</div>
+				<div class="question">
+					<h2>Are online consultations available at flexible hours?</h2>
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+				<div class="answer">
+				   <p>We understand that your schedule can be hectic. Many of our healthcare providers offer extended hours to accommodate your needs, and some even provide 24/7 coverage for urgent medical requirements. Our goal is to ensure that you can access healthcare when it's most convenient for you.</p>
+				</div>
+			</div>
+			<a id="faq-link" href="#">More frequently asked questions</a>
+			<a id="faq-link-two" href="#">Get Started</a>
 		</section>
 	</main>
 
-	<footer class="footer" id="footer">
-		<div class="logo">lOgO</div>
-		<table>
-			<tr>
-				<th>Company</th>
-				<th>Links</th>
-				<th>Resources</th>
-			</tr>
-			<tr>
-				<td>For NGOs</td>
-				<td>Partner with us</td>
-				<td>Training</td>
-			</tr>
-			<tr>
-				<td>Hospitals</td>
-				<td>Training</td>
-				<td>About Us</td>
-			</tr>
-			<tr>
-				<td>Products</td>
-				<td>Our events</td>
-				<td>Media</td>
-			</tr>
-			<tr>
-				<td>Government</td>
-				<td>Privacy policy</td>
-				<td>FAQ</td>
-			</tr>
-			<tr>
-				<td>Our sponsors</td>
-				<td>Contact Us</td>
-				<td>About Us</td>
-			</tr>
-		</table>
+	<footer class="footer animate-box" data-animate-effect="fadeIn" id="footer">
+		<div class="first-footer">
+			<h4>Give the gift of Good Health</h4>
+			<p>Our membership can be a thoughtful and valuable present,</p>
+			<p>offering access to a range of general health services and</p>
+			<p>expert medical consultations.</p>
+			<a href="#">Gift a Membership</a>
+		</div>
+		<div class="second-footer">
+			<div class="footer-links">
+				<p class="logo">e-Clinic</p>
+				<table>
+					<tr>
+						<th>Company</th>
+						<th>Links</th>
+						<th>Resources</th>
+					</tr>
+					<tr>
+						<td>For NGOs</td>
+						<td>Partner with us</td>
+						<td>Training</td>
+					</tr>
+					<tr>
+						<td>Hospitals</td>
+						<td>Training</td>
+						<td>About Us</td>
+					</tr>
+					<tr>
+						<td>Products</td>
+						<td>Our events</td>
+						<td>Media</td>
+					</tr>
+					<tr>
+						<td>Government</td>
+						<td>Privacy policy</td>
+						<td>FAQ</td>
+					</tr>
+					<tr>
+						<td>Our sponsors</td>
+						<td>Contact Us</td>
+						<td>About Us</td>
+					</tr>
+				</table>
+			</div>
+			<div class="newsletter">
+				<form action="/submit-newsletter" method="post">
+					<label for="email">Newsletter</label><br>
+					<div class="subscribe">
+						<input type="email" id="email" name="email" placeholder="Your email"><br>
+						<input type="submit" id="submit" value="Subscribe">
+					</div>
+				</form>
+				<p> <span>Email:</span> <br> oneemail@example.com</p>
+			</div>
+		</div>
+		<div class="third-footer">
+			<div class="copyright">&copy; Copyright @ezerindeed <span id="current-year"></span>, All Rights Reserved</div>
+			<div class="socials">
+				<i class="fa-brands fa-github"></i>
+				<i class="fa-brands fa-x-twitter"></i>
+				<i class="fa-brands fa-linkedin-in"></i>
+			</div>
+		</div>
 	</footer>
 
+	<script>
+		// Wait for the DOM to be fully loaded
+		document.addEventListener("DOMContentLoaded", function () {
+    	// Get the current year
+    	const currentYear = new Date().getFullYear();
+    	// Update the current year in the footer
+    	document.getElementById('current-year').textContent = currentYear;});
+	</script>
+
 	<script src="js/main.js"></script>
+	<script src="js/review.js"></script>
+	<script src="js/faq.js"></script>
+	<script src="js/navbar.js"></script>
 </body>
 </html>
