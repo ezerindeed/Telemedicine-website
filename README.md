@@ -25,7 +25,7 @@ This website serves as an informative platform for telemedicine, offering detail
 
 ## Demo
 
-You can visit the live demo of this website [here](#) (Add a link to your hosted website).
+You can visit the live demo of this website [here](https://eclinic-web.vercel.app/)
 
 ## Installation
 

@@ -739,7 +739,9 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center; }
-            .socials i { font-size: 26px; 
+            .socials a i { 
+                color: #f0f0f0;
+                font-size: 26px; 
 }
 @media screen and (max-width: 768px) {
     .footer { padding: 10px; }
@@ -784,5 +786,6 @@ body {
                     display: flex;
                     justify-content: space-between;
                     align-items: center; }
-                    .socials i { font-size: 22px }
+                    .socials i { 
+                        font-size: 22px }
 }
