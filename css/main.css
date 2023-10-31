@@ -25,7 +25,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
     z-index: 100; 
     display: flex;
     justify-content: space-between;
@@ -74,7 +74,7 @@ body {
                     content: "";
                     position: absolute;
                     height: 1.5px;
-                    bottom: 0.001px;
+                    bottom: 0.1px;
                     left: 0;
                     right: 0;
                     background-color: #2596be;
@@ -123,43 +123,77 @@ body {
             #get-started-link:hover { 
                 background-color: #fff;
                 border: 2px solid #fff; }  
-    .nav-menu-icon {
+    .nav-icon {
             display: none; }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .navbar {
+        position: fixed;
+        height: 40px;
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 10px; }
-        .logo {  }
-        .nav-menu-icon {
-          display: block;
-          font-size: 24px;
-          cursor: pointer; }
-          .nav-menu-icon.active::before {
-            content: "\00D7"; }
-              .nav-menu {
-                  display: none;
-                  flex-direction: column;
-                  position: absolute;
-                  top: 60px;
-                  right: 0;
-                  background-color: #fff; /* Add your background color */
-                  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-                }
-                .nav-menu.active {
-                    display: flex;
-                  }
-                
-                  .nav-menu li {
-                    margin: 0;
-                    padding: 10px;
-                  }
-                
-                  .navlinks {
-                    display: none; /* Hide the additional links for mobile */
-                  }
+        flex-direction: row;
+        padding: 18px 10px; }
+        .navbar.sticky .nav-icon { color: #b4b5f8; }
+        .logo { font-size: 26px; }
+        .nav-icon {
+            display: block;
+            color: #f0f0f0;
+            margin-right: 20px;
+            font-size: 24px;
+            cursor: pointer; }
+            .nav-icon.cancel {
+                display: block;
+                color: #f0f0f0;
+                margin-right: 20px;
+                font-size: 24px;
+                cursor: pointer; }
+        .nav-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            left: 0;
+            height: fit-content;
+            width: 100%;
+            padding: 10px;
+            font-family: 'Onest', sans-serif;
+            background-color: #f0f0f0;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); }
+            .nav-menu.active {
+                display: flex; }
+            .nav-menu li { margin-bottom: 14px; }
+            .nav-menu li a {
+                color: #111;
+                font-size: 18px; }
+                .nav-menu li a:hover { color: #111; }
+        .navlinks {
+            display: flex;
+            flex-direction: column;
+            width: 80%; }
+            .nav-link { 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                margin-bottom: 10px; }
+                #partner-link { 
+                    background-color: transparent;
+                    color: #6f72f8;
+                    border-color: #6f72f8; }
+                    #partner-link:hover {
+                        color: #4447ff;
+                        background-color: transparent;
+                        border-color: #4447ff; }
+                #get-started-link { 
+                    background-color: #6f72f8;
+                    color: #f0f0f0;
+                    border-color: #6f72f8;
+                    margin-bottom: 20px; }
+                    #get-started-link:hover {
+                        color: #f0f0f0;
+                        background-color: #4447ff;
+                        border-color: #4447ff; }
 }
    
 .hero {
@@ -172,24 +206,18 @@ body {
     margin-top: 5%;
     margin-bottom: 0; }
     .hero-content {
-        display: flex;
-        flex-direction: row; 
-        align-items: center;
-        justify-content: space-between;
-        max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px; }
         .hero-text {
-            flex: 1;
             margin-right: 120px;
             max-width: 50%; }
             .hero-text h3 {
                 font-size: 35px;
-                color: #444;
+                color: #f0f0f0;
                 margin-bottom: 10px; }
             .hero-text p {
                 font-size: 18px;
-                color: #444;
+                color: #f0f0f0;
                 margin-bottom: 50px; }
                 .hero-text p span { 
                     font-size: 18px;
@@ -208,12 +236,28 @@ body {
                     background-color: #486e97;
                     border: 2px solid #486e97;
 }
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 10px;
+        padding-bottom: 50px;
+        height: fit-content;
+        margin-top: 60px; }
+        .hero-content { 
+            padding: 0px 10px; }
+        .hero-text {
+            margin-right: 0;
+            max-width: 100%; }
+            .hero-text h3 { font-size: 24px; }
+            .hero-text p { font-size: 18px; }
+            .hero-text a { 
+                font-size: 14px; }
+}
 
 .appointments {
     background-color: #e2e3e4;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center; }
     .appointments-content { 
@@ -234,6 +278,7 @@ body {
             border-radius: 2px;
             padding: 100px 200px 0 150px;
             margin-left: 500px;
+            color: #f0f0f0;
             background-color: rgb(25, 169, 178, 0.5); }
             .appointments-content .appointments-text h5 {
                 font-weight: bolder;
@@ -255,6 +300,23 @@ body {
                 .appointments-content .appointments-text a:hover { 
                     background-color: #4572a2;
                     border: 2px solid #4572a2;
+}
+@media screen and (max-width: 768px) {
+    .appointments {
+        position: relative;
+        display: flex;
+        flex-direction: column; }
+        .appointments-content { padding-top: 0; }
+            .appointments-content img {
+                display: none; }
+            .appointments-content .appointments-text { 
+                margin-left: 0;
+                width: 100%;
+                height: fit-content;
+                padding: 20px 5px 40px 10px; }
+                .appointments-content .appointments-text h5 {
+                font-size: 26px; }
+                .appointments-content .appointments-text p { font-size: 16px;}
 }
 
 .services {
@@ -301,6 +363,29 @@ body {
             background-color: #64544e;
             border: 2px solid #64544e; 
 }
+@media screen and (max-width: 768px) {
+    .services {
+        background: linear-gradient(to bottom, #e2e3e4 1%, #D8DADC 2%, #CBD3D7 4%, #C2CCD4 7%, #C9CED1 100%);
+        padding: 20px; }
+        .services h3 { font-size: 30px; }
+        .services .services-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; }
+            .services .services-content img {
+                margin: 0; 
+                width: 100%;}
+            .services .services-content .services-text {
+                margin: 0; }
+                .services .services-content .services-text h4 { 
+                    font-size: 22px;
+                    text-align: center; }
+                .services .services-content .services-text p { 
+                    text-align: center;
+                    max-width: 100%; }
+                .services .services-content .services-text a { text-align: center; }
+}
 
 .meetDoctors { 
     background-color: #829EC5;
@@ -318,7 +403,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center; }
-        .meetDoctors-content::before{
+        .meetDoctors-content::before {
             content: '';
             position: absolute;
             bottom: 0;
@@ -338,7 +423,7 @@ body {
             font-weight: bold;
             margin-bottom: 20px;
             color: rgb(190, 116, 12); }
-            .meetDoctors-content a:hover { 
+            .meetDoctors-content .link:hover { 
                 text-decoration: underline; }
         .meetDoctors-content .images img {
             height: 150px; }
@@ -349,37 +434,35 @@ body {
         height: 600px; }
         .testimonial { 
             display: none;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
             margin: 0 auto;
             padding: 0; }
         .testimonial.active { 
             display: block; }
-            .testimonial div { 
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                margin: 0 auto; }
-            .testimonial div .iv_comma {
+            .testimonial .iv_comma {
                 color: #b1d1f0; 
                 font-size: 200px;
                 margin: 40px; }
-            .testimonial div .text {
+            .testimonial .text {
                 display: flex;
                 flex-direction: column; }
-                .testimonial div .text p {
+                .testimonial .text p {
                     margin-bottom: 15px;
+                    text-align: center;
                     color: #f0f0f0; 
                     font-size: 30px; }
-                    .testimonial div .text .testimonial-info { 
+                    .testimonial .text .testimonial-info { 
                         display: flex;
                         flex-direction: row; }
-                        .testimonial div .text .testimonial-info img { 
+                        .testimonial .text .testimonial-info img { 
                             width: 70px; 
                             height: 70px;
                             border: 2.5px solid #b1d1f0;
                             margin-right: 10px;
                             border-radius: 50px; }
-                        .testimonial div .text .testimonial-info .name { 
+                        .testimonial .text .testimonial-info .name { 
                             color: #dde4ec;
                             font-size: 18px;
                             text-transform: uppercase;
@@ -421,6 +504,54 @@ body {
         .review:hover { 
             color: #8ebff3;
             border-color: #8ebff3; 
+}
+@media screen and (max-width: 768px) {
+    .meetDoctors {
+        padding:  0 20px; }
+        .meetDoctors-content { 
+            height: fit-content;
+            padding: 20px;
+            padding-bottom: 0; }
+            .meetDoctors-content::before {
+                height: 8px; }
+            .meetDoctors-content h3 {
+                text-align: center;
+                font-size: 26px; }
+            .meetDoctors-content p { text-align: center; }
+            .meetDoctors-content .images img {
+                height: 60px; }
+        .testimonials {
+            height: fit-content;
+            padding-bottom: 40px;
+            width: 100%; }
+            .testimonial { 
+                width: 100%;
+                display: none;
+                justify-content: center;
+                align-items: flex-start;
+                margin: 0;
+                padding: 0; }
+                .testimonial.active { display: flex; }
+                .testimonial .iv_comma { 
+                    margin: 0 1px 0 1px;
+                    font-size: 54px; }
+                .testimonial .text { 
+                    padding: 0; }
+                 .testimonial .text p { 
+                    font-size: 14px; }
+                    .testimonial .text .testimonial-info { 
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0; }
+                        .testimonial .text .testimonial-info img {
+                            width: 60px;
+                            height: 60px; }
+                        .testimonial .text .testimonial-info .name { 
+                            font-size: 16px; }
+        .indicator { 
+            width: 6px;
+            height: 6px; }
 }
 
 .faqs {
@@ -495,10 +626,18 @@ body {
         justify-content: center; }
         #faq-link-two:hover { 
             background-color: #5fc4e3; }
+@media screen and (max-width: 768px) {
+    .faqs { 
+        padding: 14px;
+        margin: 0; }
+        h3 { font-size: 24px; }
+        .faq { width: 100%; }
+            .question h2 { font-size: 14px; }
+}
 
 .footer {
     margin-top: 0;
-    padding: 80px 100px 40px 100px;
+    padding: 60px 40px 40px 40px;
     background-color: #0f4876;
     color: #fff;
     font-family: 'Onest', sans-serif;
@@ -511,14 +650,15 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        line-height: 1px;
         width: 100%;
         border-bottom: 1px solid #d4f4ff; }
         .first-footer h4 {
             color: #a8b4bd;
             text-transform: uppercase; 
             font-size: 16px; }
-        .first-footer p { font-size: 30px; }
+        .first-footer p { 
+            text-align: center;
+            font-size: 28px; }
         .first-footer a { 
             color: #ffffff;
             text-decoration: none;
@@ -597,4 +737,50 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center; }
-            .socials i { font-size: 26px; }
+            .socials i { font-size: 26px; 
+}
+@media screen and (max-width: 768px) {
+    .footer { padding: 10px; }
+        .first-footer h4 { font-size: 14px; }
+        .first-footer p { font-size: 24px; }
+        .second-footer {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 5px 20px 5px; }
+            .footer-links { 
+                font-size: 14px;
+                width: 100%;
+                margin-bottom: 26px;
+                line-height: 1.5; }
+                .footer-links .logo { font-size: 28px; }
+                .footer-links table { 
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%; }
+                    .footer-links table tr {
+                        white-space: nowrap;
+                        width: 100px; }
+                    .footer-links table th {
+                        font-size: 16px;
+                        width: 50%;
+                        text-align: left; }
+                    .footer-links table td {
+                        width: 50%;
+                        text-align: left; }
+            .newsletter { width: 100%; }
+                label { font-size: 14px; }
+                    #email { width: 80%; }
+                    #submit { width: 20%; }
+        .third-footer { 
+            display: flex;
+            flex-direction: column; }
+            .copyright { 
+                font-size: 16px;
+                margin-bottom: 20px; }
+                .socials {
+                    width: 30%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center; }
+                    .socials i { font-size: 22px }
+}

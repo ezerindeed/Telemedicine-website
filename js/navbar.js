@@ -7,16 +7,19 @@ window.addEventListener('scroll', function() {
     }
   });
 
-  function toggleMenu() {
-    var menu = document.getElementById("nav-menu");
-    var menuIcon = document.getElementById("nav-menu-icon");
-    
-    if (menu.classList.contains("active")) {
-      menu.classList.remove("active");
-      menuIcon.classList.remove("active");
-    } else {
-      menu.classList.add("active");
-      menuIcon.classList.add("active");
-    }
-  }
+  const navIcon = document.getElementById('nav-icon');
+  const navMenu = document.getElementById('nav-menu');
   
+  navIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  navIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('cancel');
+  
+    if (navMenu.classList.contains('cancel')) {
+      navIcon.innerHTML = '&#10005;';
+    } else {
+      navIcon.innerHTML = '&#9776;';
+    }
+  });

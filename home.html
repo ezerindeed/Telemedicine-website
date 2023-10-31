@@ -23,7 +23,7 @@
 	<header>
 		<nav class="navbar" id="navbar">
 		  <div class="logo">e-Clinic</div>
-		  <div class="nav-menu-icon" id="nav-menu-icon" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+		  <div class="nav-icon" id="nav-icon" onclick="toggleMenu">&#9776;</div>
 		  <ol class="nav-menu" id="nav-menu">
 			<li><a href="#">About Us</a></li>
 			<li><a href="#">Services</a></li>
@@ -33,11 +33,11 @@
 			<li><a href="#">Pharmacy</a></li>
 			<li><a href="#">Health Articles</a></li>
 			<li><a href="#">Contact Us</a></li>
+			<div class="navlinks">
+			   <a href="#" class="nav-link" id="partner-link">Partner with us</a>
+			   <a href="#" class="nav-link" id="get-started-link">Get Started</a>
+			</div>
 		  </ol>
-		  <div class="navlinks">
-		     <a href="#" class="nav-link" id="partner-link">Partner with us</a>
-		     <a href="#" class="nav-link" id="get-started-link">Get Started</a>
-		  </div>
 		</nav>
 	</header>
 
@@ -108,8 +108,7 @@
 			</div>
 			<div class="testimonials animate-box" data-animate-effect="fadeInUp">
 				<div class="testimonial active">
-					<div>
-						<p class="iv_comma">&ldquo;</p>
+					<p class="iv_comma">&ldquo;</p>
 						<div class="text">
 							<p>The level of care and attention I received here was beyond exceptional. It changed my life profoundly, and I'm deeply grateful for the incredible support.</p>
 							<div class="testimonial-info">
@@ -117,12 +116,10 @@
 								<p class="name">Fahra Johnson</p>
 							</div>
 						</div>
-						<p class="iv_comma">&rdquo;</p>
-					</div>
+					<p class="iv_comma">&rdquo;</p>	
 				</div>
 				<div class="testimonial">
-					<div>
-						<p class="iv_comma">&ldquo;</p>
+					<p class="iv_comma">&ldquo;</p>
 						<div class="text">
 							<p>I cannot express how grateful I am for the compassionate and dedicated team. They went above and beyond to help me during a challenging time. I will forever be indebted to them.</p>
 							<div class="testimonial-info">
@@ -130,12 +127,10 @@
 								<p class="name">Dave Andrew</p>
 							</div>
 					 	</div>
-						<p class="iv_comma">&rdquo;</p>
-					</div>
+					<p class="iv_comma">&rdquo;</p>
 				</div>
 				<div class="testimonial">
-					<div>
-						<p class="iv_comma">&ldquo;</p>
+					<p class="iv_comma">&ldquo;</p>
 						<div class="text">
 							<p>When life took an unexpected turn, this amazing service was my guiding light. Their expertise, support, and care were unwavering, and I found my way back to health with their help.</p>
 							<div class="testimonial-info">
@@ -143,8 +138,7 @@
 								<p class="name">Aria Siwell</p>
 							</div>
 						</div>
-						<p class="iv_comma">&rdquo;</p>
-					</div>
+					<p class="iv_comma">&rdquo;</p>
 				</div>
 				<div class="mD-lastSection">
 					<div class="indicators">
@@ -156,7 +150,7 @@
 				</div>			
 			</div>
 		</section>
-		<section class="faqs fade-in animate-box" data-animate-effect="fadeInUp">
+		<section class="faqs animate-box" data-animate-effect="fadeInUp">
 			<h3>Frequently asked questions</h3>
 			<div class="faq">
 				<div class="question">
@@ -233,9 +227,9 @@
 	<footer class="footer animate-box" data-animate-effect="fadeIn" id="footer">
 		<div class="first-footer">
 			<h4>Give the gift of Good Health</h4>
-			<p>Our membership can be a thoughtful and valuable present,</p>
-			<p>offering access to a range of general health services and</p>
-			<p>expert medical consultations.</p>
+			<p>Our membership can be a thoughtful and valuable present,
+				offering access to a range of general health services and
+				expert medical consultations.</p>
 			<a href="#">Gift a Membership</a>
 		</div>
 		<div class="second-footer">
@@ -275,18 +269,16 @@
 				</table>
 			</div>
 			<div class="newsletter">
-				<form action="/submit-newsletter" method="post">
-					<label for="email">Newsletter</label><br>
-					<div class="subscribe">
-						<input type="email" id="email" name="email" placeholder="Your email"><br>
-						<input type="submit" id="submit" value="Subscribe">
-					</div>
-				</form>
+				<label for="email">Newsletter</label><br>
+				<div class="subscribe">
+					<input type="email" id="email" name="email" placeholder="Your email"><br>
+					<input type="submit" id="submit" value="Subscribe">
+				</div>
 				<p> <span>Email:</span> <br> oneemail@example.com</p>
 			</div>
 		</div>
 		<div class="third-footer">
-			<div class="copyright">&copy; Copyright @ezerindeed <span id="current-year"></span>, All Rights Reserved</div>
+			<div class="copyright">&copy; @ezerindeed <span id="current-year"></span>, All Rights Reserved</div>
 			<div class="socials">
 				<i class="fa-brands fa-github"></i>
 				<i class="fa-brands fa-x-twitter"></i>

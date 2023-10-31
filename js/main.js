@@ -17,8 +17,20 @@ function addAnimations() {
   });
 }
 
-// Add event listener to call addAnimations when the page is scrolled
 window.addEventListener('scroll', addAnimations);
 
-// Initial call to addAnimations when the page loads
 window.addEventListener('load', addAnimations);
+
+// Check if the viewport width is less than or equal to 768px
+if (window.innerWidth <= 768) {
+  // If it's a mobile device, change the data-animate-effect to "fadeInUp"
+  var element = document.getElementById("hero-content");
+  element.setAttribute("data-animate-effect", "fadeInUp");
+}
+
+// Check if the viewport width is less than or equal to 768px
+if (window.innerWidth <= 768) {
+  // If it's a mobile device, change the data-animate-effect to "fadeInUp"
+  var element = document.getElementById("appointments-content");
+  element.setAttribute("data-animate-effect", "fadeInUp");
+}
