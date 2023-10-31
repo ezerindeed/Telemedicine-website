@@ -433,21 +433,23 @@ body {
         position: relative;
         height: 600px; }
         .testimonial { 
-            display: flex;
+            display: none;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             margin: 0 auto;
             padding: 0; }
         .testimonial.active { 
-            display: block; }
+            display: flex; }
             .testimonial .iv_comma {
                 color: #b1d1f0; 
                 font-size: 200px;
                 margin: 40px; }
             .testimonial .text {
                 display: flex;
-                flex-direction: column; }
+                flex-direction: column;
+                justify-content: center;
+                align-items: center; }
                 .testimonial .text p {
                     margin-bottom: 15px;
                     text-align: center;
