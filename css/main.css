@@ -433,7 +433,7 @@ body {
         position: relative;
         height: 600px; }
         .testimonial { 
-            display: none;
+            display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
