@@ -31,7 +31,6 @@ You can visit the live demo of this website [here](#) (Add a link to your hosted
 
 As a static website, there's no need for complex installation procedures. Simply download or clone this repository to your local machine 
 
-```bash
 git clone https://github.com/your-username/your-repo.git
 
 ## Usage
